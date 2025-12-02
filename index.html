@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Sayang! 💪</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 42px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown-title {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .time-unit {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 80px;
+        }
+
+        .time-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .time-label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .motivation-cards {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border-left: 5px solid #667eea;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .quote-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .quote-text {
+            font-size: 24px;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .btn-refresh {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-refresh:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .progress-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .progress-title {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            border-radius: 15px;
+            transition: width 2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .checklist {
+            margin-top: 20px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .final-message h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .final-message p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .heart {
+            color: #e74c3c;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>💪 Semangat UNAIR, Sayang!</h1>
+            <p>Aku tau kamu pasti capek, tapi aku bangga banget sama perjuanganmu. Kamu kuat, kamu hebat, dan kamu pasti bisa! ❤️</p>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-box">
+            <div class="countdown-title">⏰ Waktu Menuju SNBT 2026</div>
+            <div class="countdown" id="countdown">
+                <div class="time-unit">
+                    <div class="time-number" id="days">0</div>
+                    <div class="time-label">Hari</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-number" id="hours">0</div>
+                    <div class="time-label">Jam</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-number" id="minutes">0</div>
+                    <div class="time-label">Menit</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apology Message -->
+        <div class="progress-section">
+            <div class="progress-title">💌 Aku Minta Maaf...</div>
+            <div class="card-text" style="text-align: left; line-height: 2; color: #2c3e50;">
+                <p style="margin-bottom: 15px;">
+                    <strong>Sayang,</strong>
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Aku buat website ini bukan cuma buat nyemangatin kamu, tapi juga sebagai <strong style="color: #e74c3c;">bentuk permintaan maaf</strong> dari aku.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Maaf ya kalau akhir-akhir ini aku <strong>terlalu sibuk</strong> sampai-sampai kurang kasih perhatian ke kamu. Maaf kalau aku sering <strong>slow respon</strong>, maaf kalau aku nggak bisa selalu ada saat kamu butuh aku.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Aku tau kamu lagi dalam masa-masa <strong>paling berat</strong> — ujian, try out, tekanan masuk UNAIR, semuanya dateng bersamaan. Dan di saat-saat kayak gini, harusnya aku <strong>lebih perhatian</strong>, harusnya aku <strong>lebih ada buat kamu</strong>.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Tapi malah aku sibuk dengan urusan aku sendiri sampai lupa kalau kamu juga butuh support, butuh didengar, butuh dipeluk (walau cuma lewat chat).
+                </p>
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: #e74c3c;">I'm sorry</strong> kalau kamu pernah ngerasa sendirian. <strong style="color: #e74c3c;">I'm sorry</strong> kalau aku pernah bikin kamu nangis karena ngerasa aku nggak peduli. Padahal aku peduli, sayang. Aku cuma nggak tau gimana cara nunjukin nya dengan baik.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Website ini adalah <strong>cara aku bilang "maaf"</strong> dan juga cara aku bilang <strong>"aku tetap ada, aku tetap dukung kamu, walau kadang aku nggak sempurna dalam nunjukin nya."</strong>
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Dari sekarang, aku janji akan coba <strong>lebih baik</strong>. Lebih perhatian, lebih dengerin kamu, lebih ada saat kamu butuh.
+                </p>
+                <p style="margin-bottom: 0; text-align: center; font-size: 18px; color: #e74c3c;">
+                    <strong>Maafin aku ya, sayang. Aku sayang kamu. ❤️</strong>
+                </p>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 15px; border-left: 4px solid #ffc107;">
+                <p style="color: #856404; font-size: 16px; margin: 0;">
+                    💡 <strong>PS:</strong> Kalau kamu lagi baca ini, boleh nggak aku minta waktu kamu sebentar nanti? Pengen denger cerita kamu, pengen tau gimana kabar kamu. Aku kangen. 🥺
+                </p>
+            </div>
+        </div>
+
+        <!-- Motivasi Cards -->
+        <div class="motivation-cards">
+            <div class="card">
+                <div class="card-icon">😤</div>
+                <div class="card-title">Saat Kamu Capek</div>
+                <div class="card-text">
+                    Istirahat sebentar boleh kok. Kamu nggak harus sempurna setiap saat. Yang penting kamu udah berusaha. Aku tetap bangga sama kamu, apapun hasilnya. Tapi aku tau kamu bisa lebih dari ini! 💪
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌟</div>
+                <div class="card-title">Ingat Tujuanmu</div>
+                <div class="card-text">
+                    UNAIR menunggumu! Bayangin nanti kamu udah jadi mahasiswa di sana, bangga pakai almamater, ketemu teman baru, belajar hal yang kamu suka. Semua perjuangan ini akan terbayar! 🎓
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">❤️</div>
+                <div class="card-title">Aku Selalu Di Sini</div>
+                <div class="card-text">
+                    Kalau kamu butuh tempat curhat, aku ada. Kalau kamu butuh motivasi, aku siap. Kalau kamu pengen istirahat sejenak, aku akan temani. Kamu nggak sendirian dalam perjuangan ini. We're in this together! 🤝
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <div class="card-title">Kamu Lebih Kuat Dari Yang Kamu Kira</div>
+                <div class="card-text">
+                    Lihat seberapa jauh kamu udah sampai! Dari awal belajar sampai sekarang, kamu udah berkembang banget. Setiap soal yang kamu kerjain, setiap materi yang kamu pahami, itu semua bukti kalau kamu bisa! 💯
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote-box">
+            <div class="quote-text" id="quoteText">"Success is not final, failure is not fatal: it is the courage to continue that counts."</div>
+            <div class="quote-author" id="quoteAuthor">- Winston Churchill</div>
+            <button class="btn-refresh" onclick="changeQuote()">Quote Lain 🔄</button>
+        </div>
+
+        <!-- Final Message -->
+        <div class="final-message">
+            <h2>Pesan Dariku <span class="heart">❤️</span></h2>
+            <p>
+                Aku bangga banget punya pacar yang sekuat dan sekeren kamu. Ngeliat kamu berjuang keras kayak gini bikin aku makin sayang. 
+                <br><br>
+                Ingat ya, apapun hasil ujiannya nanti, kamu tetap berharga di mataku. Tapi aku yakin, dengan usaha kamu yang sekeras ini, UNAIR pasti akan jadi milik kamu!
+                <br><br>
+                <strong>Kamu bisa! Aku percaya sama kamu! 💪✨</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown to SNBT 2026 (assuming early April)
+        const targetDate = new Date('2026-04-05T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+        }
+
+        setInterval(updateCountdown, 60000);
+        updateCountdown();
+
+        // Quotes
+        const quotes = [
+            {
+                text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                author: "Winston Churchill"
+            },
+            {
+                text: "Kamu nggak harus jadi yang terbaik, tapi berusahalah jadi versi terbaik dari dirimu.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "The future belongs to those who believe in the beauty of their dreams.",
+                author: "Eleanor Roosevelt"
+            },
+            {
+                text: "Setiap usaha yang kamu lakuin hari ini, akan jadi hasil yang kamu rasain besok.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Believe you can and you're halfway there.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                text: "Capek boleh, menyerah jangan. Istirahat boleh, berhenti jangan!",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "Aku yakin kamu bisa masuk UNAIR. Dan kalau kamu belum yakin, aku yakin untuk kita berdua.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf ya kalau aku nggak bisa selalu ada saat kamu belajar. Tapi tau nggak? Setiap detik aku selalu mikirin kamu dan doa'in kamu.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Aku minta maaf kalau kadang aku malah ngeganggu waktu belajar kamu. Aku cuma kangen dan pengen pastiin kamu baik-baik aja.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf ya kalau aku nggak bisa bantu jelasin pelajaranmu. Tapi yang bisa aku lakuin adalah dukung kamu dari samping, peluk kamu pas kamu capek, dan ingetin kamu untuk istirahat.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Jangan lupa makan ya sayang. Aku tau kamu suka skip makan kalau lagi fokus belajar. Otak kamu butuh energi untuk bisa kerja maksimal. Jaga kesehatan, please.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Udah minum air hari ini? Jangan dehidrasi ya. Aku nggak mau kamu sakit gara-gara terlalu fokus belajar. Health first, oke?",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Kalau kamu merasa sendirian dalam perjuangan ini, ingat aku. Aku mungkin nggak ngerti semua materi yang kamu pelajarin, tapi aku ngerti perjuanganmu. Dan aku bangga.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "It's okay to not be okay. Boleh nangis kalau emang pengen nangis. Boleh marah kalau emang kesel. Yang penting setelah itu, kamu bangkit lagi. Dan aku akan ada di situ.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Tidur yang cukup ya sayang. Aku tau deadline try out atau belajar materi banyak, tapi begadang terus nggak baik. Istirahat yang cukup juga bagian dari persiapan.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf kalau aku kadang cerewet ngingetin ini itu. Aku cuma care sama kamu dan nggak mau kamu burn out. Kamu penting buat aku.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Jangan terlalu keras sama diri sendiri. Salah satu soal bukan berarti kamu gagal. Itu cuma berarti kamu lagi belajar. Progress, not perfection.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Aku pengen kamu tau, effort kamu itu luar biasa. Setiap jam yang kamu habiskan untuk belajar, aku lihat. Dan aku respek banget sama dedikasi kamu.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Kalau nilai try out kamu turun, jangan down. Itu bukan ukuran kemampuan kamu. Itu cuma data untuk tau mana yang perlu diperbaiki. Keep going!",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf ya kalau kadang aku nggak ngerti kenapa kamu stress. Tapi yang aku ngerti adalah, aku pengen ada buat kamu. Cerita aja kalau kamu butuh.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Kamu lagi baca ini berarti kamu lagi butuh semangat ya? Here it is: KAMU HEBAT! KAMU KUAT! KAMU BISA! Don't give up now!",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Take a break kalau perlu. Jalan-jalan sebentar, dengerin musik, atau chat aku. Otak kamu butuh refreshing biar bisa mikir lebih jernih lagi.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Aku minta maaf kalau aku sering nanya 'udah belajar?' atau 'try out hasilnya gimana?'. Aku nggak bermaksud nge-judge, cuma pengen tau progress kamu dan bisa support lebih baik.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "You're doing amazing, sweetie. Seriously. Aku ngeliat usaha kamu dari hari ke hari, dan itu impressive banget. I'm so proud of you.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Ingat ya, apapun hasilnya nanti, kamu tetap orang yang aku sayang. UNAIR atau bukan, kamu tetap berharga. Tapi aku yakin, kamu BISA masuk UNAIR!",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf kalau kadang aku nggak bisa nemani kamu belajar karena kesibukan aku. Tapi walau nggak di samping kamu, aku selalu mikirin dan dukung kamu dari jauh.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Kamu itu strong, sayang. Lebih strong dari yang kamu pikir. Dan kalau kadang kamu feel weak, lean on me. Aku akan jadi kekuatan kamu.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Jangan bandingin progress kamu sama orang lain. Everyone has their own pace. Yang penting kamu hari ini lebih baik dari kamu kemarin.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Maaf kalau aku pernah bikin kamu sedih atau nangis gara-gara hal sepele pas kamu lagi stress belajar. I didn't mean to. You're precious to me.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Kalau kamu merasa overwhelmed, breathe. Satu soal at a time. Satu materi at a time. Satu hari at a time. You got this.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Thank you udah mau berjuang sekeras ini untuk masa depan kamu. Aku nggak sabar ngeliat kamu jadi mahasiswa UNAIR nanti. Pasti keren banget!",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Aku bangga punya pacar yang ambisius dan pekerja keras kayak kamu. You inspire me to be better too. We grow together.",
+                author: "Dari Aku ❤️"
+            },
+            {
+                text: "Bad day doesn't mean bad life. Hari ini jelek bukan berarti besok juga jelek. Tomorrow is a new chance. And I'll be here, cheering for you.",
+                author: "Dari Aku ❤️"
+            }
+        ];
+
+        function changeQuote() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quoteText').textContent = `"${randomQuote.text}"`;
+            document.getElementById('quoteAuthor').textContent = `- ${randomQuote.author}`;
+        }
+
+        // Create stars
+        function createStars() {
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.classList.add('stars');
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                document.body.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
+</body>
+</html>
