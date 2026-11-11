@@ -35,7 +35,7 @@ export default function ProjectModal({ project, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-3 backdrop-blur-sm sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="project-modal-title"
@@ -45,7 +45,7 @@ export default function ProjectModal({ project, onClose }) {
         className="animate-modal-in relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-800 dark:bg-slate-900"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/95 px-6 py-4 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/95">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/95 px-4 py-3.5 backdrop-blur-sm sm:px-6 sm:py-4 dark:border-slate-800 dark:bg-slate-900/95">
           <div className="pr-4">
             {(project.number || project.category) && (
               <p className="font-mono text-[11px] font-medium tracking-wider text-sky-600 uppercase dark:text-sky-400">
@@ -70,7 +70,7 @@ export default function ProjectModal({ project, onClose }) {
           </button>
         </div>
 
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           <div className="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
             <img
               src={project.image}

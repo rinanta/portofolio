@@ -8,10 +8,11 @@ export const profile = {
   availability: 'Terbuka untuk peluang kerja & proyek freelance',
   avatar: '/images/profile-rinanta.jpg',
   about: {
-    headline: 'Mengubah ide kompleks menjadi aplikasi web yang intuitif dan efisien.',
+    headline: 'Mengeksplorasi Teknologi, Mewujudkan Ide melalui Pengembangan Digital.',
     paragraphs: [
-      'Saya adalah Web Developer yang berpengalaman merancang dan membangun aplikasi web modern menggunakan React, Next.js, Tailwind CSS, serta pengembangan backend dengan PHP, Laravel, MySQL, dan Firebase.',
-      'Saya sangat memperhatikan detail visual, kenyamanan pengalaman pengguna, aksesibilitas web, serta penulisan kode yang rapi dan mudah dirawat dalam jangka panjang.'
+      'Saya merupakan mahasiswa S1 Informatika di Universitas Muhammadiyah Semarang yang memiliki ketertarikan pada bidang Web Development. Saya senang mempelajari dan mengembangkan aplikasi berbasis web, mulai dari merancang antarmuka pengguna hingga membangun fungsionalitas aplikasi.',
+      'Dalam proses belajar dan mengembangkan proyek, saya terus mengeksplorasi berbagai teknologi seperti HTML, CSS, JavaScript, React.js, PHP, Laravel, dan MySQL. Selain pengembangan web, saya juga sedang mempelajari dan mengeksplorasi pengembangan aplikasi mobile menggunakan Flutter sebagai upaya memperluas pengetahuan dan keterampilan saya di bidang teknologi.',
+      'Bagi saya, setiap proyek merupakan kesempatan untuk belajar, mengembangkan kemampuan, dan mengubah ide menjadi solusi digital yang bermanfaat.'
     ]
   },
   contact: {

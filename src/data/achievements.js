@@ -14,6 +14,37 @@ export const achievements = [
     url: 'https://drive.google.com/file/d/1dSWG6t9xwEQVUjgDSKpLBSZQlg31SQnw/view?usp=sharing'
   },
   {
+    id: 'cert-ai-berinovasi',
+    category: 'Sertifikasi & Pelatihan',
+    title: 'Berinovasi dengan AI (15 Jam Pelatihan)',
+    issuer: 'Kemenpora RI · Yayasan Plan International Indonesia & AVPN',
+    year: 'September 2026',
+    description:
+      'Sertifikat penyelesaian pelatihan "Berinovasi dengan AI" selama 15 jam pembelajaran meliputi Artificial Intelligence, Generative AI, Responsible in Using AI, dan Thematic AI Workshop (didukung ADB & Google.org).',
+    url: 'https://drive.google.com/file/d/1EzvM-BSHupgo3zI_Yw6rRPA0hxCh2yPL/view?usp=sharing'
+  },
+  {
+    id: 'cert-softskills-greenskills',
+    category: 'Sertifikasi & Pelatihan',
+    title: 'Softskills and Greenskills Training (18 Jam Pelatihan)',
+    issuer: 'Futuremakers by Standard Chartered · Yayasan Plan International Indonesia',
+    year: 'September 2026',
+    description:
+      'Menyelesaikan program Futuremakers Youth Employability Programme selama 18 jam pembelajaran mencakup modul Greenskills (isu lingkungan & pekerjaan berkelanjutan) dan Softskills (optimasi CV, surat lamaran, dan wawancara kerja).',
+    url: 'https://drive.google.com/file/d/1nF5r7fLVyZZfM7g7MynmldKqZyOo9oaU/view?usp=sharing'
+  },
+  {
+    id: 'cert-hki-eduhealth',
+    category: 'Hak Cipta & Prestasi',
+    title: 'Surat Pencatatan Ciptaan (HKI) — Program Komputer: EduHealth',
+    issuer: 'Kementerian Hukum RI (DJKI)',
+    year: 'Juli 2026',
+    credentialId: 'EC002026114844 · No. 001348700',
+    description:
+      'Tercatat sebagai salah satu pencipta karya Program Komputer "EduHealth" bersama tim Program Studi S1 Informatika UNIMUS.',
+    url: 'https://drive.google.com/file/d/14ZVmbKqJm3jDI9tIQnfxoRCBPSzqVIjP/view?usp=sharing'
+  },
+  {
     id: 'cert-hki-sibookie',
     category: 'Hak Cipta & Prestasi',
     title: 'Surat Pencatatan Ciptaan (HKI) — Si-Bookie: Flip Book Berbantuan AR',
@@ -37,12 +68,22 @@ export const achievements = [
   {
     id: 'cert-oracle-java',
     category: 'Sertifikasi & Pelatihan',
-    title: 'Java Fundamentals — Course & Final Exam Completion',
+    title: 'Java Fundamentals — Award of Final Exam Completion',
     issuer: 'Oracle Academy',
     year: 'Januari 2024',
     description:
-      'Lulus ujian akhir dan menyelesaikan seluruh rangkaian pembelajaran pemrograman berorientasi objek Java Fundamentals.',
+      'Lulus ujian akhir (Final Exam) pembelajaran pemrograman berorientasi objek Java Fundamentals dari Oracle Academy.',
     url: 'https://drive.google.com/file/d/1z_LHg9gkQqeEKpPKgasiDh9TdSLYMw4n/view?usp=sharing'
+  },
+  {
+    id: 'cert-oracle-java-course',
+    category: 'Sertifikasi & Pelatihan',
+    title: 'Java Fundamentals — Award of Course Completion',
+    issuer: 'Oracle Academy · Informatika UNIMUS',
+    year: 'Januari 2024',
+    description:
+      'Menyelesaikan seluruh materi dan tugas pembelajaran pemrograman berorientasi objek Java Fundamentals dari Oracle Academy.',
+    url: 'https://drive.google.com/file/d/13LaeJF0u3EMHfo0wDOsw6tWDrXaYZ__H/view?usp=sharing'
   },
   {
     id: 'cert-pkm-ptma',

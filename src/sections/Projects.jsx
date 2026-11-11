@@ -4,11 +4,9 @@ import SectionTitle from '../components/SectionTitle';
 import { projects } from '../data/projects';
 
 /**
- * Editorial showcase of selected projects: one featured wide card followed by a balanced 2x2 grid.
+ * Editorial showcase of selected projects in a uniform 2-column grid.
  */
 export default function Projects({ onSelectProject }) {
-  const [featuredProject, ...otherProjects] = projects;
-
   return (
     <section
       id="projects"
@@ -20,28 +18,16 @@ export default function Projects({ onSelectProject }) {
           <SectionTitle
             eyebrow="Portofolio"
             title="Karya & Proyek"
-            description="Aplikasi web yang telah dibangun dan dideploy secara langsung—mulai dari portal HRIS internal, profil layanan kesehatan, hingga sistem operasional usaha."
+            description="Aplikasi web yang telah dibangun dan dideploy secara langsung mulai dari portal HRIS internal, profil layanan kesehatan, hingga sistem operasional usaha."
           />
         </Reveal>
 
-        <div className="space-y-6">
-          {featuredProject && (
-            <Reveal>
-              <ProjectCard
-                project={featuredProject}
-                onViewDetails={onSelectProject}
-                featured
-              />
+        <div className="grid gap-6 md:grid-cols-2">
+          {projects.map((project, idx) => (
+            <Reveal key={project.id} delay={idx * 70} className="h-full">
+              <ProjectCard project={project} onViewDetails={onSelectProject} />
             </Reveal>
-          )}
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {otherProjects.map((project, idx) => (
-              <Reveal key={project.id} delay={(idx + 1) * 70} className="h-full">
-                <ProjectCard project={project} onViewDetails={onSelectProject} />
-              </Reveal>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

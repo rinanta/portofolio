@@ -22,18 +22,18 @@ export default function Experience() {
           />
         </Reveal>
 
-        <ol className="relative space-y-8 border-l-2 border-slate-200 pl-6 sm:pl-8 dark:border-slate-800">
+        <ol className="relative ml-3 space-y-6 border-l-2 border-slate-200 pl-5 sm:ml-0 sm:space-y-8 sm:pl-8 dark:border-slate-800">
           {experiences.map((item, idx) => (
             <li key={item.id} className="relative">
               <Reveal delay={idx * 90}>
                 <span
-                  className="absolute -left-[35px] top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-sky-600 bg-white text-sky-600 sm:-left-[43px] dark:border-sky-500 dark:bg-slate-950 dark:text-sky-400"
+                  className="absolute -left-[33px] top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-sky-600 bg-white text-sky-600 sm:-left-[43px] dark:border-sky-500 dark:bg-slate-950 dark:text-sky-400"
                   aria-hidden="true"
                 >
                   <Briefcase className="h-3 w-3" />
                 </span>
 
-                <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6 transition-colors hover:border-sky-300/80 hover:bg-white dark:border-slate-800 dark:bg-slate-900 dark:hover:border-sky-500/50">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition-colors hover:border-sky-300/80 hover:bg-white sm:p-6 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-sky-500/50">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <div>
                       <h3 className="font-display text-lg font-bold text-slate-900 dark:text-white">

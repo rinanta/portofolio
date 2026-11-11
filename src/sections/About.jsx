@@ -23,7 +23,9 @@ export default function About() {
 
           <div className="grid gap-6 text-base leading-relaxed text-slate-600 md:grid-cols-2 dark:text-slate-300">
             {profile.about.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index} className="last:odd:md:col-span-2">
+                {paragraph}
+              </p>
             ))}
           </div>
         </Reveal>

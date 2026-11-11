@@ -28,40 +28,43 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
-            <div className="lg:col-span-5">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-12">
+            <div className="min-w-0 lg:col-span-5">
               <p className="text-xs font-semibold tracking-widest text-sky-600 uppercase dark:text-sky-400">
                 Kontak
               </p>
-              <h2 className="font-display mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+              <h2 className="font-display mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
                 Mari Terhubung
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base dark:text-slate-400">
                 Tertarik berdiskusi mengenai peluang kerja, kolaborasi proyek web, atau pengembangan
-                aplikasi? Silakan hubungi saya langsung melalui email maupun tautan di samping.
+                aplikasi? Silakan hubungi saya langsung melalui email maupun tautan yang tersedia.
               </p>
 
               <p className="mt-5 inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                <MapPin className="h-4 w-4 text-sky-600 dark:text-sky-400" aria-hidden="true" />
+                <MapPin
+                  className="h-4 w-4 shrink-0 text-sky-600 dark:text-sky-400"
+                  aria-hidden="true"
+                />
                 <span>Berdomisili di {profile.location}</span>
               </p>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="divide-y divide-slate-200/80 rounded-2xl border border-slate-200 bg-slate-50/70 dark:divide-slate-800/80 dark:border-slate-800/90 dark:bg-slate-900/70">
+            <div className="min-w-0 lg:col-span-7">
+              <div className="overflow-hidden divide-y divide-slate-200/80 rounded-2xl border border-slate-200 bg-slate-50/70 dark:divide-slate-800/80 dark:border-slate-800/90 dark:bg-slate-900/70">
                 {/* Email row */}
-                <div className="flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
-                  <div className="flex min-w-0 items-center gap-3.5">
+                <div className="flex flex-col justify-between gap-3.5 p-4 sm:flex-row sm:items-center sm:gap-4 sm:p-6">
+                  <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-3.5">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
                       <Mail className="h-4 w-4" aria-hidden="true" />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
                         Email
                       </p>
                       <a
                         href={`mailto:${profile.contact.email}`}
-                        className="block truncate font-medium text-slate-900 transition-colors hover:text-sky-600 dark:text-white dark:hover:text-sky-400"
+                        className="block truncate text-sm font-medium text-slate-900 transition-colors hover:text-sky-600 sm:text-base dark:text-white dark:hover:text-sky-400"
                       >
                         {profile.contact.email}
                       </a>
@@ -73,7 +76,7 @@ export default function Contact() {
                       type="button"
                       onClick={handleCopyEmail}
                       aria-label="Salin alamat email"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-700"
+                      className="inline-flex min-h-[40px] w-full items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-700"
                     >
                       {copied ? (
                         <>
@@ -95,17 +98,17 @@ export default function Contact() {
                   href={profile.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-4 p-5 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500 sm:p-6 dark:hover:bg-slate-800/40"
+                  className="group flex items-center justify-between gap-3 p-4 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500 sm:gap-4 sm:p-6 dark:hover:bg-slate-800/40"
                 >
-                  <div className="flex min-w-0 items-center gap-3.5">
+                  <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-3.5">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
                       <LinkedInIcon className="h-4 w-4" />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
                         LinkedIn
                       </p>
-                      <p className="truncate font-medium text-slate-900 transition-colors group-hover:text-sky-600 dark:text-white dark:group-hover:text-sky-400">
+                      <p className="truncate text-sm font-medium text-slate-900 transition-colors group-hover:text-sky-600 sm:text-base dark:text-white dark:group-hover:text-sky-400">
                         linkedin.com/in/rinanta-indra-dewi
                       </p>
                     </div>
@@ -125,17 +128,17 @@ export default function Contact() {
                   href={profile.contact.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-4 p-5 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500 sm:p-6 dark:hover:bg-slate-800/40"
+                  className="group flex items-center justify-between gap-3 p-4 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500 sm:gap-4 sm:p-6 dark:hover:bg-slate-800/40"
                 >
-                  <div className="flex min-w-0 items-center gap-3.5">
+                  <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-3.5">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
                       <GitHubIcon className="h-4 w-4" />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
                         GitHub
                       </p>
-                      <p className="truncate font-medium text-slate-900 transition-colors group-hover:text-sky-600 dark:text-white dark:group-hover:text-sky-400">
+                      <p className="truncate text-sm font-medium text-slate-900 transition-colors group-hover:text-sky-600 sm:text-base dark:text-white dark:group-hover:text-sky-400">
                         github.com/rinanta
                       </p>
                     </div>

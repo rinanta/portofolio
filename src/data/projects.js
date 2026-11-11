@@ -113,5 +113,28 @@ export const projects = [
       'Tersedia secara online di Netlify untuk memudahkan akses lintas perangkat'
     ],
     demoUrl: 'https://tim-3-bengkel-cemerlang-jaya-motor.netlify.app/login'
+  },
+  {
+    id: 'toko-buku-jingga',
+    number: '06',
+    category: 'Retail & Profil Toko Buku',
+    domain: 'tokobukujinggaa.netlify.app',
+    title: 'Toko Buku Jingga — Toko Buku Independen',
+    shortDescription:
+      'Landing page profil toko buku independen dengan katalog buku terlaris, empat kategori pilihan, promo paket bundling hemat, serta pemesanan langsung via WhatsApp.',
+    image: '/images/project-toko-buku-jingga.png',
+    imageAlt: 'Tampilan halaman utama website Toko Buku Jingga',
+    techStack: ['Next.js', 'React', 'CSS', 'Netlify'],
+    problem:
+      'Toko buku independen membutuhkan etalase digital yang hangat dan tertata untuk menampilkan kurasi buku pilihan, paket bundling hemat, serta memudahkan pelanggan berkonsultasi dan memesan buku.',
+    solution:
+      'Membangun landing page Toko Buku Jingga berbasis Next.js bernuansa jingga-krem dengan etalase koleksi unggulan, 4 kategori utama, daftar buku terlaris, testimoni pembaca, paket bundling, dan integrasi pemesanan langsung ke WhatsApp.',
+    features: [
+      'Pengelompokan 4 kategori utama (Fiksi, Nonfiksi, Anak, Pelajaran) dan daftar Buku Terlaris Pekan Ini',
+      'Katalog Promo Paket Bundling (Paket Pelajar, Keluarga Membaca, dan Kolektor) lengkap dengan rincian hemat',
+      'Tombol pemesanan dan konsultasi rekomendasi buku langsung terhubung ke WhatsApp pada tiap buku dan paket',
+      'Informasi jam operasional, alamat toko fisik, tautan Google Maps, serta ulasan pembaca dalam satu halaman'
+    ],
+    demoUrl: 'https://tokobukujinggaa.netlify.app/'
   }
 ];

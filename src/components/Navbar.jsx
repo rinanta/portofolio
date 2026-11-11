@@ -51,8 +51,9 @@ export default function Navbar({ activeSection, onSelectSection, theme, onToggle
             alt="Logo RID Rinanta Indra Dewi"
             width="40"
             height="40"
-            className="h-10 w-10 shrink-0 rounded-xl border border-slate-200/80 bg-white object-contain p-0.5 dark:border-slate-700"
+            className="h-9 w-9 shrink-0 rounded-xl border border-slate-200/80 bg-white object-contain p-0.5 sm:h-10 sm:w-10 dark:border-slate-700"
           />
+          <span className="truncate text-sm sm:hidden">{profile.shortName}</span>
           <span className="hidden sm:inline">{profile.name}</span>
         </a>
 
@@ -106,7 +107,7 @@ export default function Navbar({ activeSection, onSelectSection, theme, onToggle
       {menuOpen && (
         <div
           id="mobile-nav-menu"
-          className="border-t border-slate-200 bg-slate-50 px-4 py-3 md:hidden dark:border-slate-800 dark:bg-slate-950"
+          className="border-t border-slate-200 bg-white px-4 py-3 shadow-lg md:hidden dark:border-slate-800 dark:bg-slate-950"
         >
           <ul className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => {
@@ -117,7 +118,7 @@ export default function Navbar({ activeSection, onSelectSection, theme, onToggle
                     href={`#${item.id}`}
                     onClick={() => handleNavClick(item.id)}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                    className={`flex min-h-[44px] items-center rounded-lg px-3.5 py-2.5 text-sm font-medium transition-colors ${
                       isActive
                         ? 'bg-sky-50 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300'
                         : 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-900'
