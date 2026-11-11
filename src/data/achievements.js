@@ -45,6 +45,16 @@ export const achievements = [
     url: 'https://drive.google.com/file/d/14ZVmbKqJm3jDI9tIQnfxoRCBPSzqVIjP/view?usp=sharing'
   },
   {
+    id: 'cert-capstone-best-team',
+    category: 'Hak Cipta & Prestasi',
+    title: 'Juara 1 Kategori Best Team — Capstone Project',
+    issuer: 'Program Studi S1 Informatika · FTIK UNIMUS',
+    year: 'Januari 2026',
+    description:
+      'Meraih Juara 1 Kategori Best Team bersama Tim Magang Sehat pada kegiatan Capstone Project bertema "Inovasi Digital Untuk Industri 5.0".',
+    url: 'https://drive.google.com/file/d/1E2YaBCW1xNTyPvRd3ylgN7lwBMUbGsdB/view?usp=sharing'
+  },
+  {
     id: 'cert-hki-sibookie',
     category: 'Hak Cipta & Prestasi',
     title: 'Surat Pencatatan Ciptaan (HKI) — Si-Bookie: Flip Book Berbantuan AR',
